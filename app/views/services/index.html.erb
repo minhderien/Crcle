@@ -1,0 +1,96 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h1 class="text-center semibold text-2xl">Welcome to Crcle!</h1>
+
+
+<div class="p-4 text-center">
+  <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4 ...">
+
+  </div>
+</div>
+
+<div class="shadow flex mb-2">
+    <input class="w-full rounded p-2 text-center" type="text" placeholder="Search an user">
+    <button class="bg-white w-auto flex justify-end items-center text-blue p-2 hover:text-blue-light">
+        <i class="material-icons">search</i>
+    </button>
+</div>
+
+
+
+<ul class="flex mb-4">
+  <li class="flex-1 mr-2">
+    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" href="/services">Discover</a>
+  </li>
+  <li class="flex-1 mr-2">
+    <a class="text-center block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="/followings">Followings</a>
+  </li>
+</ul>
+
+<% @services.each do |service| %>
+  <div class="max-w-sm w-full lg:max-w-full lg:flex mb-2">
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded
+        h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+      <img class="object-fill w-full h-full" src="https://cdn-s.acuityscheduling.com/logo17894761.jpeg?1567701047&whiteBg=1">
+    </div>
+    <div class="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r 
+      p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class=" text-gray-900 font-bold text-xl mb-2"><%= service.title %></div>
+        <p class="text-gray-700 text-base"><%= service.description %></p>
+      </div>
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Macaque_a_longue_queue.jpg" >
+        <div class="text-sm">
+          <strong>
+            <p class="text-gray-900 leading-none">@<%= service.user.username %></p>
+          </strong>
+          <p class="text-gray-600"><%= service.cost %>$</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+<!--
+<p id="notice"><%= notice %></p>
+
+<h1>Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Duration</th>
+      <th>Cost</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.image %></td>
+        <td><%= service.title %></td>
+        <td><%= service.duration %></td>
+        <td><%= service.cost %></td>
+        <td><%= service.category %></td>
+        <td><%= service.description %></td>
+        <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service', new_service_path %>
+-->
