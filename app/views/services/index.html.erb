@@ -30,7 +30,7 @@
 <% @services.each do |service| %>
   <div class="max-w-sm w-full lg:max-w-full lg:flex mb-2">
     <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded
-        h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+        h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
       <img class="object-fill w-full h-full" src="https://cdn-s.acuityscheduling.com/logo17894761.jpeg?1567701047&whiteBg=1">
     </div>
     <div class="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r 
@@ -39,21 +39,27 @@
         <div class=" text-gray-900 font-bold text-xl mb-2"><%= service.title %></div>
         <p class="text-gray-700 text-base"><%= service.description %></p>
       </div>
-      <div class="flex items-center">
-        <img class="w-10 h-10 rounded-full mr-4" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Macaque_a_longue_queue.jpg" >
-        <div class="text-sm">
-          <strong>
-            <p class="text-gray-900 leading-none">@<%= service.user.username %></p>
-          </strong>
-          <p class="text-gray-600"><%= service.cost %>$</p>
+      <div class="flex items-end">
+          <div class="flex-1">
+            <img class="w-10 h-10 rounded-full mr-4" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Macaque_a_longue_queue.jpg" >
+            <div class="text-sm">
+              <strong>
+                <p class="text-gray-900 leading-none">@<%= service.user.username %></p>
+              </strong>
+              <p class="text-gray-600">Price: <%= service.cost %>$</p>
+          </div>
+        </div>
+        <div class="flex-1">
+        </div>
+        <div class="flex-1 flex justify-end">
+          <button class="bg-green-500 rounded flex justify-end items-end text-green p-3 hover:text-green-light">
+            Book
+          </button>
         </div>
       </div>
     </div>
   </div>
 <% end %>
-
-
-
 
 <!--
 <p id="notice"><%= notice %></p>

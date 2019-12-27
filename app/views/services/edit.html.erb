@@ -1,6 +1,9 @@
-<h1>Editing Service</h1>
+<div class="max-w m-auto px-4">
+    <h1 class="text-3xl mt-10"> Editing a service</h1>
+    
+    <%= render 'form', service: @service %>
+</div>
 
-<%= render 'form', service: @service %>
 
-<%= link_to 'Show', @service %> |
-<%= link_to 'Back', services_path %>
+    <%= link_to 'View', @service , class: "btn btn-primary" %> |
+    <%= link_to 'Back', services_path, class:"btn btn-primary" %>
