@@ -1,6 +1,18 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :service_owner, only: [:edit, :update, :destroy]
+
+
+  # Check if the user is the service's owner
+  def service_owner
+    unless @service.user_id == current_user.id
+      flash[:alert] = "You're not authorized to this action."
+      redirect_to services_path
+     end
+  end
+
+
   # GET /services
   # GET /services.json
   def index
