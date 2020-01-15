@@ -1,24 +1,45 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Crcle
 
-Things you may want to cover:
+Crcle
+An minimalist social network that is targeted towards people that are offering services such as hairdressers, esthetician, etc. This application is built with Ruby on Rails and TailwindCSS 
 
-* Ruby version
+## Project Status
 
-* System dependencies
+This project is currently in development. Users can create a service, register and login. Eventually, the user will be able to follow each other, a client will be able to book a service, etc.
 
-* Configuration
 
-* Database creation
+## Reflection
 
-* Database initialization
+### Why did I start building this project? 
 
-* How to run the test suite
+I wanted to solve a real-world problem that I can realistically create. My friend who is my barber is using a scheduling system that allow his client to book appointment using Instagram, but I found that it was missing some feature such as:
 
-* Services (job queues, cache servers, search engines, etc.)
+- Notifying clients (followers/subscribers) when new availabilities are posted
 
-* Deployment instructions
+- Live chat with his clients
 
-* ...
+I also noticed that there’s a lot of people like him using Instagram to promote his work. So, I wanted to create something more niche and hip.
+
+I asked myself, is this app scalable? So here a few ideas that I want to implement in the future (no priority order):
+
+- Plugin for Shopify/Instagram integration
+
+- Loyalty program when appointment is booked with this app.
+
+- Discount option
+
+- Different payment method
+
+- Social network:
+
+	- Client can leave reviews/comments
+
+	- Client can rate the service giver and vice versa
+
+	- Service giver can announce message on the platform that will inform every subscriber
+
+Finally, I wanted to learn a different language, so I decided to work with Ruby on Rails.
+
+## Installation and Setup Instructions (to come in the future)
+
